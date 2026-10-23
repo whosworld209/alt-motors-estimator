@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full bg-slate-50">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estimer & Vendre ma voiture | Alt Motors Togo</title>
+  <link rel="icon" href="https://alt-motors.com/templates/admin/assets/AT-L.png">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Styles Personnalisés -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body class="min-h-full flex flex-col text-slate-800 font-sans antialiased">
+
+  <!-- HEADER INSTITUTIONNEL -->
+  <header class="bg-slate-900 text-white sticky top-0 z-40 border-b border-slate-800 shadow-md">
+    <!-- Topbar info -->
+    <div class="bg-slate-950 py-1.5 px-4 text-xs border-b border-slate-800/80">
+      <div class="max-w-6xl mx-auto flex justify-between items-center text-slate-400">
+        <div class="flex items-center space-x-4">
+          <span><i class="fa-solid fa-location-dot text-rose-500 mr-1.5"></i>Lomé, Togo</span>
+          <span class="hidden sm:inline"><i class="fa-regular fa-clock text-slate-500 mr-1.5"></i>Lun - Sam: 8h00 - 18h30</span>
+        </div>
+        <div>
+          <a href="tel:+22897759232" class="hover:text-white transition-colors">
+            <i class="fa-solid fa-phone text-emerald-500 mr-1.5"></i>+228 97 75 92 32
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Nav -->
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="https://alt-motors.com/" class="flex items-center group" aria-label="ALT Motors Togo">
+        <img src="https://alt-motors.com/templates/admin/assets/AT-L.png" alt="ALT Motors" class="alt-motors-logo h-10 w-auto">
+      </a>
+
+      <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-300">
+        <a href="#" class="hover:text-white transition-colors">Accueil</a>
+        <a href="#" class="hover:text-white transition-colors">Voitures à louer</a>
+        <a href="#" class="hover:text-white transition-colors">Voitures à vendre</a>
+        <a href="#" class="text-rose-500 font-semibold">Vendre mon véhicule</a>
+        <a href="#" class="hover:text-white transition-colors">Contact</a>
+      </div>
+
+      <div class="flex items-center space-x-3">
+        <a href="https://wa.me/22897759232" target="_blank" class="inline-flex items-center space-x-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold px-3 py-2 rounded transition-colors shadow-sm">
+          <i class="fa-brands fa-whatsapp text-sm"></i>
+          <span class="hidden sm:inline">Assistance WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- BANNIÈRE TITRE -->
+  <section class="estimator-hero bg-slate-900 text-white py-8 px-4 border-b border-slate-800">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="inline-block bg-rose-500/10 text-rose-400 border border-rose-500/20 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+        ALT MOTORS · LOMÉ, TOGO
+      </span>
+      <h1 class="text-2xl sm:text-3xl font-bold tracking-tight">Estimer et vendre votre véhicule</h1>
+      <p class="mt-2 text-sm text-slate-400 max-w-xl mx-auto">
+        Des voitures qui marquent. Des services qui rassurent. Estimez votre véhicule et choisissez votre solution de vente.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENU PRINCIPAL & FORMULAIRE STEP-BY-STEP -->
+  <main class="flex-grow max-w-4xl w-full mx-auto px-4 py-8">
+
+    <!-- STEPPER NAVIGATION -->
+    <div class="mb-8">
+      <div class="flex items-center justify-between max-w-2xl mx-auto relative">
+        <div class="absolute top-1/2 left-0 w-full h-0.5 bg-slate-200 -translate-y-1/2 z-0"></div>
+        <div id="step-line-progress" class="absolute top-1/2 left-0 w-0 h-0.5 bg-rose-600 -translate-y-1/2 z-0 transition-all duration-300"></div>
+
+        <!-- Step 1 Indicator -->
+        <div class="relative z-10 flex flex-col items-center">
+          <div id="step-dot-1" class="w-9 h-9 rounded-full bg-rose-600 text-white flex items-center justify-center font-bold text-sm shadow-sm transition-colors">
+            1
+          </div>
+          <span id="step-label-1" class="text-xs font-semibold text-slate-900 mt-2">Véhicule</span>
+        </div>
+
+        <!-- Step 2 Indicator -->
+        <div class="relative z-10 flex flex-col items-center">
+          <div id="step-dot-2" class="w-9 h-9 rounded-full bg-white border-2 border-slate-300 text-slate-500 flex items-center justify-center font-bold text-sm transition-colors">
+            2
+          </div>
+          <span id="step-label-2" class="text-xs font-medium text-slate-500 mt-2">Estimation</span>
+        </div>
+
+        <!-- Step 3 Indicator -->
+        <div class="relative z-10 flex flex-col items-center">
+          <div id="step-dot-3" class="w-9 h-9 rounded-full bg-white border-2 border-slate-300 text-slate-500 flex items-center justify-center font-bold text-sm transition-colors">
+            3
+          </div>
+          <span id="step-label-3" class="text-xs font-medium text-slate-500 mt-2">Rendez-vous</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORM CARD CONTAINER -->
+    <div class="bg-white rounded-lg border border-slate-200 shadow-sm overflow-hidden">
+      <form id="estimation-form" onsubmit="event.preventDefault();">
+
+        <!-- ==================================================== -->
+        <!-- ÉTAPE 1 : FICHE VÉHICULE & PHOTOS -->
+        <!-- ==================================================== -->
+        <div id="step-1-content" class="p-6 sm:p-8 space-y-6">
+          <div class="border-b border-slate-100 pb-4">
+            <h2 class="text-lg font-bold text-slate-900">Caractéristiques du véhicule</h2>
+            <p class="text-xs text-slate-500 mt-1">Renseignez les informations de la carte grise et l'état général.</p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- Marque -->
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 uppercase mb-1.5">Marque *</label>
+              <input type="text" id="car-brand" placeholder="Ex: Toyota, Mercedes-Benz..." class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm rounded p-2.5 focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition-all" required />
+            </div>
+
+            <!-- Modèle -->
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 uppercase mb-1.5">Modèle *</label>
+              <input type="text" id="car-model" placeholder="Ex: Corolla, Tucson, CR-V..." class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm rounded p-2.5 focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition-all" required />
+            </div>
+
+            <!-- Année -->
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 uppercase mb-1.5">Année de fabrication *</label>
+              <input type="number" id="car-year" placeholder="Ex: 2020" min="1886" step="1" class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm rounded p-2.5 focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition-all" required />
+            </div>
+
+            <!-- Kilométrage -->
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 uppercase mb-1.5">Kilométrage (km) *</label>
+              <input type="number" id="car-mileage" placeholder="Ex: 85000" min="0" step="1000" class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm rounded p-2.5 focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition-all" required />
+            </div>
+
+            <!-- Carburant -->
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 uppercase mb-1.5">Motorisation / Carburant *</label>
+              <select id="car-fuel" class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm rounded p-2.5 focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition-all" required>
+                <option value="Essence">Essence</option>
+                <option value="Diesel">Diesel</option>
+                <option value="Hybride">Hybride</option>
+                <option value="Électrique">Électrique</option>
+              </select>
+            </div>
+
+            <!-- Boîte de vitesses -->
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 uppercase mb-1.5">Boîte de vitesses *</label>
+              <select id="car-transmission" class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm rounded p-2.5 focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition-all" required>
+                <option value="Automatique">Automatique</option>
+                <option value="Manuelle">Manuelle</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- État général -->
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 uppercase mb-1.5">État général du véhicule *</label>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <label class="border border-slate-200 rounded p-3 flex items-start space-x-3 cursor-pointer hover:bg-slate-50 transition-colors">
+                <input type="radio" name="car-condition" value="Excellent" class="mt-0.5 text-rose-600 focus:ring-rose-500" checked />
+                <div>
+                  <span class="block text-xs font-bold text-slate-800">Excellent état</span>
+                  <span class="block text-[11px] text-slate-500">Aucun frais à prévoir, carrosserie nickel.</span>
+                </div>
+              </label>
+
+              <label class="border border-slate-200 rounded p-3 flex items-start space-x-3 cursor-pointer hover:bg-slate-50 transition-colors">
+                <input type="radio" name="car-condition" value="Bon" class="mt-0.5 text-rose-600 focus:ring-rose-500" />
+                <div>
+                  <span class="block text-xs font-bold text-slate-800">Bon état</span>
+                  <span class="block text-[11px] text-slate-500">Usure normale, légères rayures légères.</span>
+                </div>
+              </label>
+
+              <label class="border border-slate-200 rounded p-3 flex items-start space-x-3 cursor-pointer hover:bg-slate-50 transition-colors">
+                <input type="radio" name="car-condition" value="A_reparer" class="mt-0.5 text-rose-600 focus:ring-rose-500" />
+                <div>
+                  <span class="block text-xs font-bold text-slate-800">Frais à prévoir</span>
+                  <span class="block text-[11px] text-slate-500">Travaux mécaniques ou tôlerie nécessaires.</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Zone de Dropzone Photos -->
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 uppercase mb-1.5">Photos du véhicule (Optionnel)</label>
+            <div id="dropzone" class="border-2 border-dashed border-slate-300 rounded-lg p-6 text-center bg-slate-50 hover:bg-slate-100/80 transition-colors cursor-pointer">
+              <input type="file" id="file-input" multiple accept="image/*" class="hidden" />
+              <i class="fa-solid fa-camera text-slate-400 text-2xl mb-2 block"></i>
+              <p class="text-xs font-medium text-slate-700">Cliquez ou glissez-déposez des photos ici</p>
+              <p class="text-[11px] text-slate-400 mt-1">Formats acceptés : JPG, PNG (Max 5 Mo/photo)</p>
+            </div>
+            <!-- Aperçu des photos -->
+            <div id="photos-preview" class="grid grid-cols-4 gap-2 mt-3 hidden"></div>
+          </div>
+
+          <!-- Navigation Étape 1 -->
+          <div class="pt-4 border-t border-slate-100 flex justify-end">
+            <button type="button" id="btn-to-step-2" class="bg-rose-600 hover:bg-rose-700 text-white font-semibold text-sm px-6 py-2.5 rounded transition-colors inline-flex items-center space-x-2">
+              <span>Calculer l'estimation</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- ==================================================== -->
+        <!-- ÉTAPE 2 : ESTIMATION ET OPTION DE VENTE -->
+        <!-- ==================================================== -->
+        <div id="step-2-content" class="p-6 sm:p-8 space-y-6 hidden">
+          <div class="border-b border-slate-100 pb-4">
+            <h2 class="text-lg font-bold text-slate-900">Résultat de la cote estimée</h2>
+            <p class="text-xs text-slate-500 mt-1">Fourchette indicative calculée sur la base des ventes récentes au Togo.</p>
+          </div>
+
+          <!-- Display Résultat Cote -->
+          <div class="bg-slate-900 text-white rounded-lg p-6 text-center relative overflow-hidden">
+            <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">Valeur marchande estimée</p>
+            <div class="my-3">
+              <span id="estimated-price" class="text-3xl sm:text-4xl font-extrabold text-white">0 FCFA</span>
+            </div>
+            <p id="price-range-text" class="text-xs text-slate-300">Fourchette estimée : 0 FCFA - 0 FCFA</p>
+            <div class="mt-4 pt-3 border-t border-slate-800 inline-flex items-center space-x-2 text-[11px] text-slate-400">
+              <i class="fa-solid fa-circle-check text-emerald-500"></i>
+              <span>Calcul ajusté selon marque, année, kilométrage et état</span>
+            </div>
+          </div>
+
+          <!-- Choix du Mode de Vente -->
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 uppercase mb-3">Choisissez votre mode de cession *</label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              
+              <!-- Option A : Rachat Cash -->
+              <div id="card-option-rachat" onclick="selectSaleOption('RACHAT_CASH')" class="border-2 border-rose-600 bg-rose-50/30 rounded-lg p-4 cursor-pointer relative transition-all">
+                <div class="flex justify-between items-start">
+                  <div class="flex items-center space-x-2">
+                    <input type="radio" name="sale-option" value="RACHAT_CASH" id="radio-rachat" class="text-rose-600 focus:ring-rose-500" checked />
+                    <span class="font-bold text-sm text-slate-900">Rachat Cash Express</span>
+                  </div>
+                  <span class="bg-rose-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">Paiement 24h</span>
+                </div>
+                <p class="text-xs text-slate-600 mt-2">
+                  Alt Motors rachète directement votre véhicule après inspection. Transaction rapide et paiement comptant sous 24 heures.
+                </p>
+                <div class="mt-3 pt-2 border-t border-rose-200/60 text-xs font-bold text-rose-700">
+                  Offre ferme garantie après bilan technique
+                </div>
+              </div>
+
+              <!-- Option B : Dépôt-Vente -->
+              <div id="card-option-depot" onclick="selectSaleOption('DEPOT_VENTE')" class="border-2 border-slate-200 hover:border-slate-300 rounded-lg p-4 cursor-pointer relative transition-all">
+                <div class="flex justify-between items-start">
+                  <div class="flex items-center space-x-2">
+                    <input type="radio" name="sale-option" value="DEPOT_VENTE" id="radio-depot" class="text-rose-600 focus:ring-rose-500" />
+                    <span class="font-bold text-sm text-slate-900">Dépôt-Vente Marketplace</span>
+                  </div>
+                  <span class="bg-slate-200 text-slate-700 text-[10px] font-bold px-2 py-0.5 rounded">Prix Maximum</span>
+                </div>
+                <p class="text-xs text-slate-600 mt-2">
+                  Nous exposons votre véhicule dans notre showroom et sur notre plateforme web pour trouver un acheteur au meilleur prix du marché.
+                </p>
+                <div class="mt-3 pt-2 border-t border-slate-100 text-xs font-semibold text-slate-700">
+                  Commission transparente sur la vente
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Navigation Étape 2 -->
+          <div class="pt-4 border-t border-slate-100 flex justify-between items-center">
+            <button type="button" id="btn-back-to-step-1" class="text-slate-600 hover:text-slate-900 font-semibold text-sm px-4 py-2 transition-colors inline-flex items-center space-x-1">
+              <i class="fa-solid fa-arrow-left text-xs"></i>
+              <span>Modifier les caractéristiques</span>
+            </button>
+            
+            <button type="button" id="btn-to-step-3" class="bg-rose-600 hover:bg-rose-700 text-white font-semibold text-sm px-6 py-2.5 rounded transition-colors inline-flex items-center space-x-2">
+              <span>Planifier l'inspection</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- ==================================================== -->
+        <!-- ÉTAPE 3 : COORDONNÉES & RDV INSPECTION -->
+        <!-- ==================================================== -->
+        <div id="step-3-content" class="p-6 sm:p-8 space-y-6 hidden">
+          <div class="border-b border-slate-100 pb-4">
+            <h2 class="text-lg font-bold text-slate-900">Coordonnées & Rendez-vous d'inspection</h2>
+            <p class="text-xs text-slate-500 mt-1">Choisissez la date de vérification physique du véhicule à notre agence de Lomé.</p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- Nom & Prénom -->
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 uppercase mb-1.5">Nom & Prénom *</label>
+              <input type="text" id="owner-name" placeholder="Ex: Yao Mensah" class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm rounded p-2.5 focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition-all" required />
+            </div>
+
+            <!-- Téléphone WhatsApp -->
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 uppercase mb-1.5">Numéro WhatsApp *</label>
+              <div class="flex">
+                <span class="inline-flex items-center px-3 text-xs text-slate-500 bg-slate-100 border border-r-0 border-slate-300 rounded-l font-semibold">+228</span>
+                <input type="tel" id="owner-phone" placeholder="90 00 00 00" class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm rounded-r p-2.5 focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition-all" required />
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 uppercase mb-1.5">Adresse Email</label>
+              <input type="email" id="owner-email" placeholder="votre.email@exemple.com" class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm rounded p-2.5 focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition-all" />
+            </div>
+
+            <!-- Ville / Quartier -->
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 uppercase mb-1.5">Ville / Quartier *</label>
+              <input type="text" id="owner-location" placeholder="Ex: Lomé, Tokoin" class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm rounded p-2.5 focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition-all" required />
+            </div>
+          </div>
+
+          <!-- Date & Heure de RDV -->
+          <div class="border-t border-slate-100 pt-4">
+            <h3 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-3">Créneau d'inspection à l'agence AL-T</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 uppercase mb-1.5">Date souhaitée *</label>
+                <input type="date" id="rdv-date" class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm rounded p-2.5 focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition-all" required />
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 uppercase mb-1.5">Heure de passage *</label>
+                <select id="rdv-time" class="w-full bg-slate-50 border border-slate-300 text-slate-800 text-sm rounded p-2.5 focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition-all" required>
+                  <option value="09:00">09:00 - Matin</option>
+                  <option value="11:00">11:00 - Matin</option>
+                  <option value="14:30">14:30 - Après-midi</option>
+                  <option value="16:30">16:30 - Fin d'après-midi</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Étape 3 -->
+          <div class="pt-4 border-t border-slate-100 flex justify-between items-center">
+            <button type="button" id="btn-back-to-step-2" class="text-slate-600 hover:text-slate-900 font-semibold text-sm px-4 py-2 transition-colors inline-flex items-center space-x-1">
+              <i class="fa-solid fa-arrow-left text-xs"></i>
+              <span>Retour à l'estimation</span>
+            </button>
+            
+            <button type="button" id="btn-submit-final" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-6 py-2.5 rounded transition-colors inline-flex items-center space-x-2 shadow-sm">
+              <i class="fa-brands fa-whatsapp text-base"></i>
+              <span>Confirmer sur WhatsApp</span>
+            </button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <!-- MODALE DE CONFIRMATION FINAL -->
+  <div id="modal-success" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-lg max-w-md w-full p-6 shadow-xl border border-slate-200 space-y-4 text-center">
+      <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-xl">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <div>
+        <h3 class="text-lg font-bold text-slate-900">Demande d'inspection enregistrée !</h3>
+        <p class="text-xs text-slate-500 mt-1">Toutes les informations ont été préparées pour notre équipe commerciale.</p>
+      </div>
+
+      <div class="bg-slate-50 p-4 rounded text-left text-xs space-y-1.5 border border-slate-200">
+        <p><span class="font-semibold text-slate-700">Véhicule :</span> <span id="summary-car">-</span></p>
+        <p><span class="font-semibold text-slate-700">Cote estimée :</span> <span id="summary-price" class="font-bold text-slate-900">-</span></p>
+        <p><span class="font-semibold text-slate-700">Option :</span> <span id="summary-option">-</span></p>
+        <p><span class="font-semibold text-slate-700">Créneau RDV :</span> <span id="summary-rdv">-</span></p>
+      </div>
+
+      <div class="pt-2 space-y-2">
+        <a id="btn-whatsapp-redirect" href="#" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm py-2.5 rounded transition-colors flex items-center justify-center space-x-2">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Ouvrir dans WhatsApp</span>
+        </a>
+        <button type="button" onclick="closeModal()" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold py-2 rounded transition-colors">
+          Fermer et revenir à l'accueil
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER INSTITUTIONNEL -->
+  <footer class="bg-slate-900 text-slate-400 text-xs border-t border-slate-800 mt-auto">
+    <div class="max-w-6xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <div class="mb-3">
+          <img src="https://alt-motors.com/templates/admin/assets/AT-L.png" alt="ALT Motors Togo" class="alt-motors-logo h-8 w-auto">
+        </div>
+        <p class="text-slate-400 leading-relaxed">
+          Africa's Logistics and Transport, votre concessionnaire automobile de confiance au Togo.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold mb-2 uppercase tracking-wider text-[11px]">Contact Agence</h4>
+        <p class="space-y-1">
+          <span class="block"><i class="fa-solid fa-phone text-rose-500 mr-2"></i>+228 97 75 92 32</span>
+          <span class="block"><i class="fa-solid fa-envelope text-slate-500 mr-2"></i>equipedecube@gmail.com</span>
+          <span class="block"><i class="fa-solid fa-location-dot text-slate-500 mr-2"></i>Lomé, Togo</span>
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold mb-2 uppercase tracking-wider text-[11px]">Horaires d'ouverture</h4>
+        <p class="space-y-1">
+          <span class="block">Lundi - Samedi : 09h00 - 18h30</span>
+          <span class="block text-slate-500">Dimanche : Fermé</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="bg-slate-950 py-4 text-center border-t border-slate-800/60 text-slate-500">
+      <p>&copy; 2026 Africa's Logistics and Transport. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- JS Logic -->
+  <script src="index.js"></script>
+</body>
+</html>

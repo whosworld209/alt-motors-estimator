@@ -1,0 +1,155 @@
+/* Custom styles for Alt Motors Estimator */
+
+:root {
+  --alt-red: #e30613;
+  --alt-burgundy: #2a1113;
+  --alt-black: #100e0e;
+}
+
+body {
+  background: #f4f2f2;
+}
+
+header.bg-slate-900 {
+  background-color: var(--alt-black);
+  border-color: #302526;
+}
+
+.bg-slate-950 {
+  background-color: #090808;
+}
+
+.bg-slate-900 {
+  background-color: #171112;
+}
+
+.estimator-hero {
+  background:
+    linear-gradient(110deg, rgba(16, 14, 14, 0.97), rgba(42, 17, 19, 0.96) 58%, rgba(16, 14, 14, 0.98)),
+    var(--alt-black);
+  border-color: #492326;
+  position: relative;
+}
+
+.estimator-hero::after {
+  background: var(--alt-red);
+  content: "";
+  display: block;
+  height: 2px;
+  margin: 1.5rem auto 0;
+  max-width: 24rem;
+  opacity: 0.8;
+}
+
+.alt-motors-logo {
+  display: block;
+  max-width: min(12rem, 45vw);
+  object-fit: contain;
+}
+
+.bg-rose-600,
+.hover\:bg-rose-700:hover,
+.bg-emerald-600,
+.hover\:bg-emerald-700:hover {
+  background-color: var(--alt-red) !important;
+}
+
+.text-rose-400,
+.text-rose-500,
+.text-rose-600,
+.text-rose-700,
+.text-emerald-500,
+.text-emerald-600 {
+  color: var(--alt-red) !important;
+}
+
+.border-rose-600,
+.focus\:border-rose-500:focus {
+  border-color: var(--alt-red) !important;
+}
+
+.focus\:ring-rose-500:focus {
+  --tw-ring-color: var(--alt-red) !important;
+}
+
+.bg-rose-50,
+.bg-rose-50\/30 {
+  background-color: #fff1f1 !important;
+}
+
+.border-rose-200\/60 {
+  border-color: rgba(227, 6, 19, 0.25) !important;
+}
+
+.text-rose-400,
+.text-rose-500,
+.text-rose-600,
+.text-rose-700,
+.text-emerald-500,
+.text-emerald-600,
+.bg-rose-600,
+.hover\:bg-rose-700:hover,
+.bg-emerald-600,
+.hover\:bg-emerald-700:hover {
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+.rounded,
+.rounded-lg,
+.rounded-full {
+  border-radius: 2px !important;
+}
+
+input,
+select,
+button {
+  border-radius: 2px !important;
+}
+
+button,
+a.bg-emerald-600 {
+  letter-spacing: 0.01em;
+}
+
+/* Smooth transitions for form steps */
+#step-1-content,
+#step-2-content,
+#step-3-content {
+  animation: fadeIn 0.25s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom scrollbar for preview photos */
+#photos-preview::-webkit-scrollbar {
+  height: 4px;
+}
+
+#photos-preview::-webkit-scrollbar-thumb {
+  background: #a9a2a2;
+  border-radius: 0;
+}
+
+/* Clean focus outline adjustments */
+select, input {
+  font-size: 14px !important;
+}
+
+/* Remove arrow buttons from number input */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
